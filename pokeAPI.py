@@ -7,7 +7,6 @@ def get_poke_info(name):
     
     :param name: Pokemon's name or Pokedex number
     :returns: Dictionary of pokemon info if successful, and None if not successful
-    
     """
     print("Retrieving Pokemon information...", end='')
     
@@ -35,7 +34,13 @@ def get_poke_info(name):
 
 
 def get_pokemon_names(limit=151, offset=0):
+    """
+    retrieves a list of pokemon names from the PokeApi
 
+    :param limit: how many pokemon you want 
+    :param offset: the number of pokemon skipped at the begining of the list
+    :returns: a list of pokemon names
+    """
     print("Retrieving List of Pokemon...", end='')
 
     URL = 'https://pokeapi.co/api/v2/pokemon/' 
@@ -58,7 +63,12 @@ def get_pokemon_names(limit=151, offset=0):
 
 
 def get_pokemon_image_url(name):
-
+    """
+    retrieves the url of the image of the specified pokemon
+    
+    :param name: the name of the pokemon you want the image of
+    :returns: The url of the image of the pokemon
+    """
     poke_dict = get_poke_info(name)
 
     if poke_dict:
