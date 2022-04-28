@@ -46,7 +46,7 @@ def main():
     def handle_poke_select(event):
         """
         Defines what happens when the user selects a Pokemon
-
+        :returns: NONE
         """
 
         selection = cbo_pokemon.get()#gets the name of the pokemon that was selected
@@ -62,7 +62,7 @@ def main():
     def handle_btn_press():
         """
         Defines what happens when the "Set Image as Desktop" button is pressed
-
+        :returns: NONE
         """
         selection = cbo_pokemon.get()
         image_path = os.path.join(image_dir, selection + '.png')
